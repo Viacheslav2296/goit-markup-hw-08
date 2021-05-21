@@ -1,0 +1,44 @@
+.what-we-do {
+  padding-bottom: 94px;
+}
+
+.what-we-do__tittle {
+  margin-bottom: 50px;
+}
+
+.what-we-do__list {
+  display: flex;
+  justify-content: center;
+}
+
+.what-we-do__item + .what-we-do__item {
+  margin-left: 30px;
+}
+
+.what-we-do__item {
+  position: relative;
+}
+
+.what-we-do__image {
+  display: block;
+}
+
+.what-we-do__description {
+  display: block;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  width: 370px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $background-color;
+  background-color: $background-what-we-do;
+}
