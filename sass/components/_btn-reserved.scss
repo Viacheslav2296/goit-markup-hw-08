@@ -1,0 +1,22 @@
+.btn-serves-reserved {
+  padding: 10px 32px;
+  min-height: 50px;
+  min-width: 200px;
+  border: 0 solid;
+  border-radius: 4px;
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  color: $background-color;
+  background-color: $fill;
+
+  &:hover {
+    background-color: $bg-btn-hover;
+  }
+}
