@@ -1,0 +1,165 @@
+footer {
+  background-color: $background-secondary;
+}
+
+.wrapper-footer {
+  display: flex;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  align-items: baseline;
+}
+
+.address-footer {
+  margin-top: 20px;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+
+  color: $background-color;
+}
+
+.logo__part-text--white {
+  color: $background-color;
+}
+
+.address-footer__contact {
+  display: block;
+  margin-top: 9px;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.icon-social-links-footer {
+  margin-left: 70px;
+}
+
+.icon-social-links-footer__tittle {
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: $background-color;
+}
+
+.social-links-list {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.social-links-list__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: $bg-icon-footer;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-links-list__item:not(:first-child) {
+  margin-left: 10px;
+}
+
+.social-links-list__icon {
+  width: 20px;
+  height: 20px;
+  fill: $background-color;
+}
+
+.social-links-list__icon + .social-links-list__icon {
+  padding-left: 10px;
+}
+
+.social-links-list__item:hover .social-links-list__link {
+  background-color: $fill;
+}
+
+.social-links-list__item:focus {
+  background-color: $fill;
+}
+
+.form-subscription-wrapper {
+  margin-left: 93px;
+}
+
+.form-subscription-wrapper__tittle {
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: $background-color;
+}
+.form-subscription__input {
+  width: 358px;
+  height: 50px;
+  margin: 0;
+  padding-left: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: $background-secondary;
+  color: $main-text;
+}
+
+.form-subscription__input:focus {
+  outline: none;
+}
+
+.form-subscription {
+  display: flex;
+  align-items: center;
+}
+.btn-subscribe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 200px;
+  height: 50px;
+  margin-left: 12px;
+  padding-left: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 0;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  background-color: $fill;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    background-color: $bg-btn-hover;
+  }
+}
+
+.btn-subscribe__name {
+  font-family: $mainfont;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: $background-color;
+}
+
+.btn-subscribe__icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  fill: $background-color;
+}
