@@ -1,5 +1,16 @@
 .logo {
-  margin-right: 93px;
+  display: block;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  @media screen and (min-width: $tablet) {
+    margin-right: 88px;
+    &--fotter {
+      margin: 0 auto;
+    }
+  }
+  @media screen and (min-width: $desktop) {
+    margin-right: 93px;
+  }
 
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
@@ -8,6 +19,7 @@
   letter-spacing: 0.03em;
 
   color: $spacial-text;
+
   &:hover,
   &:focus {
     color: $spacial-text;
