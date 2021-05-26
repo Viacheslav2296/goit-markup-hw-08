@@ -1,0 +1,38 @@
+.btn-mobile-menu {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    z-index: 999;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+  
+    @media screen and (min-width: $tablet) {
+      display: none;
+      top: 10px;
+      right: 30px;
+    }
+  }
+  
+  .btn-mobile-menu.is-open {
+    position: fixed;
+  
+    .btn-mobile-menu__icon-cross {
+      display: block;
+    }
+  
+    .btn-mobile-menu__icon-burger {
+      display: none;
+    }
+  }
+  
+  .btn-mobile-menu__icon-cross {
+    display: none;
+  }
+  
+  .btn-mobile-menu:focus .btn-mobile-menu__icon-cross,
+  .btn-mobile-menu:hover .btn-mobile-menu__icon-cross {
+    fill: $fill;
+  }
