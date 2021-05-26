@@ -1,21 +1,51 @@
 .portfolio {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .btn-filters {
   display: flex;
-  margin-bottom: 50px;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: start;
+  margin-bottom: 40px;
+
+  @media screen and (min-width: $tablet) {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
+  }
 }
 
-.btn-filters_item + .btn-filters_item {
-  margin-left: 8px;
+.btn-filters_item {
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+  @media screen and (max-width: 767px) {
+    &:first-child {
+      margin-bottom: 15px;
+    }
+  }
+  @media screen and (max-width: 399px) {
+    &:last-child {
+      margin-top: 15px;
+    }
+  }
 }
 
 .btn-filters__btn {
-  padding: 6px 22px;
-  min-width: 38px;
+  padding-left: 22px;
+  padding-right: 22px;
+  height: 38px;
 
   border: 0px;
   border-radius: 4px;
@@ -23,7 +53,7 @@
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.62;
+  line-height: 1.63;
   text-align: center;
   letter-spacing: 0.03em;
 
@@ -44,10 +74,13 @@
 }
 
 .projecrts-cards-list {
-  margin: -15px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  @media screen and (min-width: $tablet) {
+    margin: -15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: flex-start;
+  }
 }
 
 .project-card__tittle {
@@ -71,13 +104,32 @@
 }
 
 .project-card {
-  margin: 15px;
-  width: 370px;
-  height: 404px;
-
+  width: 100%;
+  // height: 404px;
+  overflow: hidden;
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  &__image {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: $mobile) {
+    width: 450px;
+  }
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: calc((100% - 3 * 30px) / 3);
+  }
 }
 
 .project-card:hover,
@@ -87,6 +139,7 @@
 }
 
 .project-card__description-wrapper {
+  width: 100%;
   padding: 20px 24px;
   border-left: 1px solid $boarder-cards;
   border-right: 1px solid $boarder-cards;
@@ -94,6 +147,7 @@
 }
 
 .project-card__image-text-wrapper {
+  width: 100%;
   position: relative;
   overflow: hidden;
 }
