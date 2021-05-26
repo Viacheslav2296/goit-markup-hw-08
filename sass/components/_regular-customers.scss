@@ -1,32 +1,48 @@
 .regular-customers {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 .regular-customers__tittle {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
+  }
 }
 
 .regular-customers-list {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  margin: -15px;
 }
 
 .regular-customers-list__client {
-  width: 170px;
-  height: 92px;
-}
+  width: calc((100% - 2 * 30px) / 2);
+  margin: 15px;
 
-.regular-customers-list__client + .regular-customers-list__client {
-  margin-left: 30px;
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 3 * 30px) / 3);
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: calc((100% - 6 * 30px) / 6);
+  }
 }
 
 .regular-customers-list__link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 170px;
-  height: 92px;
+
+  padding-top: 16px;
+  padding-bottom: 16px;
+
   border: 1px solid $icon-still;
   box-sizing: border-box;
   border-radius: 4px;
@@ -34,13 +50,14 @@
   transition-property: border-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
   &:hover,
   &:focus {
     border: 1px solid $fill;
   }
 }
 .regular-customers-list__client-logo {
+  width: 106px;
+  height: 60px;
   fill: $icon-still;
   transition-property: fill;
   transition-duration: 250ms;
